@@ -460,10 +460,12 @@ let styles = StyleSheet.create({
 		width: width
 	},
 	pickerWrap: {
-		flexDirection: 'row'
+		flexDirection: 'row',
+		zIndex: 3
 	},
 	pickerWheel: {
-		flex: 1
+		flex: 1,
+		zIndex: 4
 	},
 	pickerToolbar: {
 		height: 30,
@@ -472,7 +474,8 @@ let styles = StyleSheet.create({
 		borderTopWidth: 1,
 		borderBottomWidth: 1,
 		borderColor: '#c3c3c3',
-		alignItems: 'center'
+		alignItems: 'center',
+		zIndex: 5
 	},
 	pickerBtnView: {
 		flex: 1,
