@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jrwm/react-native-picker.git"
+    "url": "git@github.com:thmob/react-native-picker.git"
   },
   "author": "zooble",
   "license": "MIT"
