@@ -206,7 +206,7 @@ export default class PickerAny extends Component {
 			return (
 				<View style={styles.pickerWheel} key={index}>
 					<Picker
-						style={{ minHeight: 5, minWidth: 5, backgroundColor: 'pink' }}
+						style={{ minHeight: 5, minWidth: 5 }}
 						selectedValue={this.state.selectedValue[index]}
 						onValueChange={value => {
 							this.pickedValue.splice(index, 1, value);
