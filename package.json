@@ -19,7 +19,7 @@
     "email": "wenliang.web@gmail.com"
   },
   "dependencies": {
-    "react-native-picker-android": "jrwm/react-native-picker-android#master"
+    "react-native-picker-android": "thmob/react-native-picker-android#master"
   },
   "engines": {
     "node": ">=4"
