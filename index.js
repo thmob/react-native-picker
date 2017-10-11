@@ -39,7 +39,8 @@ export default class PickerAny extends Component {
 		selectedValue: PropTypes.any.isRequired,
 		onPickerDone: PropTypes.func,
 		onPickerCancel: PropTypes.func,
-		onValueChange: PropTypes.func
+		onValueChange: PropTypes.func,
+		showToolbar: PropTypes.bool
 	};
 
 	static defaultProps = {
@@ -52,7 +53,8 @@ export default class PickerAny extends Component {
 		showDuration: 300,
 		onPickerDone: () => { },
 		onPickerCancel: () => { },
-		onValueChange: () => { }
+		onValueChange: () => { },
+		showToolbar: true
 	};
 
 	constructor(props, context) {
@@ -421,7 +423,7 @@ export default class PickerAny extends Component {
 			}]}>
 				{mask}
 				<View style={[styles.pickerBox, this.state.style]}>
-					<View style={[styles.pickerToolbar, this.state.pickerToolBarStyle, { width: this.state.style.width || width }]}>
+					{ this.props.showToolbar && <View style={[styles.pickerToolbar, this.state.pickerToolBarStyle, { width: this.state.style.width || width }]}>
 						<View style={styles.pickerCancelBtn}>
 							<Text style={[styles.pickerFinishBtnText, this.state.pickerBtnStyle]}
 								onPress={this._pickerCancel.bind(this)}>{this.state.pickerCancelBtnText}</Text>
@@ -433,7 +435,7 @@ export default class PickerAny extends Component {
 							<Text style={[styles.pickerFinishBtnText, this.state.pickerBtnStyle]}
 								onPress={this._pickerFinish.bind(this)}>{this.state.pickerBtnText}</Text>
 						</View>
-					</View>
+					</View> }
 					<View style={[styles.pickerWrap, { width: this.state.style.width || width }]}>
 						{this._renderWheel(this.state.pickerData)}
 					</View>
